@@ -33,7 +33,7 @@ ssize_t input_buf(info_c *info, char **buf, size_t *len)
 			}
 			info->linecount_flag = 1;
 			remove_comments(*buf);
-			build_history_list(info, *buf, info->histcount++);
+			build_hist_list(info, *buf, info->histcount++);
 			{
 				*len = r;
 				info->cmd_buf = buf;
@@ -81,7 +81,7 @@ ssize_t get_input(info_c *info)
 		}
 
 		*buf_p = p; /* pass back pointer to current command position */
-		return (_strlen(p)); /* return length of current command */
+		return (_strl(p)); /* return length of current command */
 	}
 
 	*buf_p = buf; /* else not a chain, pass back buffer from _getline() */
@@ -136,7 +136,7 @@ int _getline(info_c *info, char **ptr, size_t *length)
 
 	c = _str_chr(buf + i, '\n');
 	k = c ? 1 + (unsigned int)(c - buf) : len;
-	new_p = _realloc(p, s, s ? s + k : k + 1);
+	new_p = _reallocd(p, s, s ? s + k : k + 1);
 	if (!new_p) /* MALLOC FAILURE! */
 		return (p ? free(p), -1 : -1);
 

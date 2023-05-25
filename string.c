@@ -1,12 +1,12 @@
 #include "shell.h"
 
 /**
- * _strlen - returns the length of a string
+ * _strl - This function returns the length of a string
  * @s: the string whose length to check
  *
- * Return: integer length of string
+ * Return: length of string
  */
-int _strlen(char *s)
+int _strl(char *s)
 {
 	int i = 0;
 

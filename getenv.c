@@ -9,7 +9,7 @@ char **get_envir(info_c *info)
 {
 	if (!info->environ || info->env_changed)
 	{
-		info->environ = list_to_strings(info->env);
+		info->environ = list_to_str(info->env);
 		info->env_changed = 0;
 	}
 
@@ -65,7 +65,7 @@ int _setenv(info_c *info, char *var, char *value)
 	if (!var || !value)
 		return (0);
 
-	buff = malloc(_strlen(var) + _strlen(value) + 2);
+	buff = malloc(_strl(var) + _strl(value) + 2);
 	if (!buff)
 		return (1);
 	_strcpy(buff, var);
