@@ -1,5 +1,3 @@
-this is team project done by Augustine Osuji and Jesse Abuaja
-
 # simple_shell
 
 ---
@@ -20,13 +18,11 @@ Project was done using C language, Betty linter, Shell and other relevant tools
 
 ## How our simple shell works
 
-It Prints a prompt and waits for a command from the user
-Creates a child process in which the command is checked
-Checks for built-ins, aliases in the PATH, and local executable programs
-The child process is replaced by the command, which accepts arguments
+It prints a prompt to the terminal and waits for a command from the user
+It then creates a child process in which the command is checked
 When the command is done, the program returns to the parent process and prints the prompt
-The program is ready to receive a new command
-To exit: press Ctrl-D or enter "exit" (with or without a status)
+The program is then ready to receive a new command
+To exit: press Ctrl-D or enter "exit"
 Works also in non interactive mode
 
 Command for compilation
